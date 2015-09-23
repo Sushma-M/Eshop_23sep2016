@@ -1,0 +1,1125 @@
+/*START - default-v8 Theme*/
+
+.wm-app {
+
+  @import url("../../../components/bootstrap/less/bootstrap.less");
+  @import url("variables.less");
+
+  font-size: @font-size-base;
+  color: @text-color;
+  font-family: @font-family-base;
+  background-color: @wm-body-bg;
+
+  //Variables
+  @wm-brand-default: #5d5d5d;
+
+  @panel-box-shadow: 1px 1px 1px 0px #f0f0f0;
+  @wm-panel-title-font-size: 1.2em;
+  @wm-panel-action-color: lighten(@text-color, 30%);
+  @wm-panel-action-font-size: 0.833em;
+
+  @wm-body-bg: #F3F3F4;
+  @wm-color-white: #fff;
+
+  //header
+  @wm-header-bg: #fff;
+  @wm-header-color: inherit;
+
+  //side panels
+  @wm-panels-border-color: #CFDBE2;
+
+  @wm-left-panel-btn-color: #515253;
+  @wm-left-panel-bg: #efeded;
+  @wm-left-panel-list-border: 1px #e6e5e5 solid;
+
+  @wm-right-panel-bg: #efeded;
+  @wm-right-panel-btn-color: #515253;
+  @wm-right-panel-list-border: 1px #e6e5e5 solid;
+
+  //tabs
+  @wm-tab-border: #dddddd;
+
+  @wm-tab-color-normal: @wm-brand-default;
+  @wm-tab-bg-normal: #fff;
+
+  @wm-tab-color-hover: @brand-primary;
+  @wm-tab-bg-hover: #fff;
+
+  @wm-tab-color-active: #233e9e;
+  @wm-tab-bg-active: #fff;
+
+  //breadcrumb
+  @breadcrumb-color : @brand-primary;
+  @breadcrumb-color-active: #a4a4a4;
+
+  //Header
+  @wm-header-bg-color: #545765;
+
+  //Label
+  label {
+    font-weight: normal;
+    line-height: 1.5em;
+  }
+
+  //Tabs
+  .nav-tabs {
+    border-bottom-color: @wm-tab-border;
+    > li {
+      > a, .app-menu a {
+        font-size: 12px;
+        color: @wm-tab-color-normal;
+        background-color: @wm-tab-bg-normal;
+        border-bottom-color: @wm-tab-border;
+        border-radius: @border-radius-base;
+        box-shadow: none;
+        margin-right: 0px;
+        border-color: transparent transparent transparent;
+        text-transform: uppercase;
+        border-left-width: 0 !important;
+        border-right-width: 0 !important;
+        &:hover, &:focus {
+          border-color: transparent transparent @brand-primary;
+          color: @wm-tab-color-hover;
+          background-color: @wm-tab-bg-hover;
+          border-bottom-width: 2px;
+        }
+
+        .app-icon {
+          background-size: 100%;
+          margin-right: 5px;
+          top: 2px;
+        }
+      }
+      &.active {
+        > a, .app-menu a {
+          border-color: transparent transparent @brand-primary;
+          color: @wm-tab-color-hover;
+          background-color: @wm-tab-bg-hover;
+          border-bottom-width: 2px;
+          &:hover {
+            border-color: transparent transparent @brand-primary;
+            color: @wm-tab-color-hover;
+            background-color: @wm-tab-bg-hover;
+            border-bottom-width: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  //Tab Content
+  .tab-content {
+    .tab-body {
+      border-color: transparent;
+      padding: 15px;
+    }
+  }
+
+  //Tile
+  .app-tile {
+    margin-bottom: 0;
+  }
+  .list-group-item-separator {
+    margin-bottom: 0.16em;
+    border-radius: 0.16em;
+    .form-group {
+      padding: 0 1em;
+    }
+  }
+
+  /*Buttons*/
+  .btn {
+    text-transform: uppercase;
+    &.btn-lg {
+      font-size: 1.4em;
+    }
+    &.btn-sm {
+      font-size: 0.7em;
+    }
+    &.btn-xs {
+      padding: 0 5px;
+    }
+    .caret {
+      margin-left: 0.7em;
+    }
+  }
+
+
+  //MODAL
+  .modal-header {
+    background-color: @navbar-default-bg;
+    color: @navbar-default-color;
+  }
+
+  //Breadcrumb
+  .breadcrumb {
+    background-color: #e6e6e6;
+    padding: 12px 14px 8px 14px;
+    li {
+      a {
+        font-size: 12px;
+        color: @breadcrumb-color;
+        text-transform: uppercase;
+      }
+      &.active {
+        a {
+          color: @breadcrumb-color-active;
+        }
+      }
+    }
+  }
+
+  .form-control {
+    box-shadow: none;
+    &:active {
+      border: 1px solid #e0e0e0;
+      box-shadow: none !important;
+    }
+  }
+
+  //Calendar Specific
+  .app-calendar {
+    background-color: @wm-color-white;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+    padding: 1.5em;
+    .fc-state-default {
+      background: #e6e6e6;
+      border: 1px solid #cdd6e1;
+      box-shadow: 0;
+      text-shadow: 0;
+      color: #515151;
+      &.fc-state-hover, &:focus, &.fc-state-active {
+        color: @btn-primary-color;
+        background: @btn-primary-bg;
+        border: 1px solid @btn-primary-border;
+      }
+      &.fc-today-button {
+        margin-left: .75em;
+      }
+    }
+
+    .well {
+      color: @brand-info;
+      padding: 0.4em;
+    }
+
+    .fc {
+      .fc-toolbar {
+        margin: 0;
+        button {
+          border-radius: 0;
+          padding: .5em 1em;
+          margin-left: 0;
+        }
+        h2 {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .fc-widget-header {
+      background-color: @btn-primary-bg;
+      color: @btn-primary-color;
+    }
+
+    .fc {
+      th {
+        padding: .5em;
+      }
+    }
+
+    .fc-body {
+      .fc-row {
+        min-height: 5em;
+      }
+    }
+  }
+
+  //Progress Bar
+  .progress {
+    border-radius: 0;
+    box-shadow: none;
+    height: 20px;
+  }
+
+  //Table
+  .table {
+    > thead {
+      > tr {
+        font-size: 1.05em;
+        border-bottom: 2px solid #ccc;
+        th {
+          padding: 15px 8px;
+          color: #5d5d5d;
+          font-size: 11px;
+          text-transform: uppercase;
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        td {
+          font-size: 12px;
+          padding: 15px 8px;
+          color: #999;
+        }
+        &.active {
+          td, th {
+            color: @brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+  /*Layout**************************************************************************/
+  .app-content-column {
+    background-color: @wm-body-bg;
+  }
+
+  //Header
+  .app-header, .app-mobile-header {
+    background-color: @wm-color-white;
+    color: #515253;
+
+    a {
+      color: #515253;
+    }
+
+    .dropdown-menu {
+      > li {
+        > a {
+          color: @wm-color-white;
+          &:hover, &:focus, &.active {
+            color: #595959;
+          }
+        }
+      }
+    }
+    .app-mobile-header {
+      background-color: @navbar-default-bg;
+      color: @navbar-default-color;
+      a {
+        color: @navbar-default-color;
+      }
+    }
+  }
+//Top Nav Bar
+  .app-navbar {
+    border-radius: 0;
+    background-color: @navbar-default-bg;
+    color: @navbar-default-color;
+  //Mobile Specific button
+    .navbar-toggle {
+      margin-right: 1.2em;
+      color: #ffffff;
+      &:hover, &:focus {
+        background-color: #ffffff;
+      }
+    }
+    .navbar-nav {
+      > li {
+        a {
+          font-size: 12px;
+          padding: 1.4em 3em;
+          text-transform: uppercase;
+          font-weight: normal;
+          text-decoration: none;
+          word-spacing: .4em;
+          i {
+            margin-right: 5px;
+          }
+          &:hover, &:focus, &.active {
+            color: @navbar-default-link-hover-color;
+            background-color: @navbar-default-hover-bg;
+          }
+        }
+
+        > .dropdown .dropdown-menu {
+          margin: 0;
+          background-color: @navbar-default-bg;
+          a {
+            color: inherit;
+            padding: .65em 1em;
+            &:hover {
+              background-color: @navbar-default-hover-bg;
+            }
+          }
+        }
+      }
+
+      .app-nav-item {
+        > .dropdown, > .app-popover {
+          a.dropdown-toggle, a.app-popover-link {
+            padding: 1.4em 3em;
+            color: inherit;
+            &:hover {
+              background-color: @navbar-default-hover-bg;
+            }
+          }
+        }
+      }
+    }
+
+    .popover {
+      min-width: 200px;
+
+      &.bottom {
+        > .arrow {
+          border-bottom-color: rgba(0, 0, 0, 0.14);
+
+          &:after {
+            border-bottom-color: rgba(232, 234, 236, 0.6);
+          }
+        }
+      }
+      .popover-content {
+        padding: 0;
+      }
+    }
+  }
+
+
+  //Left & Right Panels
+  .app-left-panel, .app-right-panel {
+    background-color: @wm-left-panel-bg;
+    .nav {
+      li, .app-nav-item {
+        margin-top: 0;
+        border-bottom: @wm-left-panel-list-border;
+
+        > a, > .btn, .dropdown > a, .dropdown > a.dropdown-toggle, .app-popover a {
+          letter-spacing: .025em;
+          font-weight: 400;
+          padding: 12px;
+          position: relative;
+          border-radius: 0;
+          line-height: 1.7;
+          color: @wm-left-panel-btn-color;
+          border-left: 0.5em solid transparent;
+          transition: color .5s ease, background .5s ease;
+          -webkit-transition: color .5s ease, background .5s ease;
+          -moz-transition: color .5s ease, background .5s ease;
+          -ms-transition: color .5s ease, background .5s ease;
+          -o-transition: color .5s ease, background .5s ease;
+          &:hover {
+            color: @brand-primary;
+            text-decoration: none;
+            background-color: #e6e4e4;
+            border-left-color: @brand-primary;
+            transition: color .5s ease, background .5s ease;
+            -webkit-transition: color .5s ease, background .5s ease;
+            -moz-transition: color .5s ease, background .5s ease;
+            -ms-transition: color .5s ease, background .5s ease;
+            -o-transition: color .5s ease, background .5s ease;
+          }
+          &.active {
+            background-color: transparent;
+            border-left-color: @brand-primary;
+            color: @brand-primary;
+          }
+          .glyphicon {
+            margin-left: 10px;
+            margin-right: 5px;
+          }
+        }
+
+        > .dropdown.open {
+          > .dropdown-menu {
+            position: relative;
+            padding: 10px 0;
+            margin: 0 0 15px;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            box-shadow: none;
+            background-color: transparent;
+            li > a {
+              padding: 8px 20px;
+            }
+          }
+        }
+      }
+    }
+    .app-nav {
+      .app-nav-item {
+        > .dropdown {
+          > a {
+            padding: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  //Left Panel
+  .app-left-panel {
+    border-right: 1px solid @wm-panels-border-color;
+  }
+
+  //Right Panel
+  .app-right-panel {
+    border-left: 1px solid @wm-panels-border-color;
+  }
+
+  //Footer
+  .app-footer {
+    padding: 1em 1.5em;
+    background-color: #F5F7FA;
+  }
+
+  .btn-group {
+    .btn.active {
+      box-shadow: none;
+      background-color: #fff;
+      border-color: @brand-primary;
+      color: @text-color;
+    }
+  }
+
+  /*Widgets styling************************************************************************/
+
+  input, select {
+    .form-control {
+      border: 1px solid #e0e0e0;
+      height: 40px;
+      &:focus {
+        box-shadow: 0 0 1px 1px #e0e0e0 !important;
+        height: 40px;
+      }
+    }
+  }
+
+  .select {
+    &.form-control {
+      padding: 9px 12px;
+    }
+  }
+
+  textarea {
+    &.form-control {
+      border: 1px solid #e0e0e0;
+      height: auto;
+      &:focus {
+        box-shadow: 0 0 1px 1px #e0e0e0 !important;
+      }
+    }
+  }
+
+  .form-group {
+    .control-label {
+      text-align: right;
+      margin-top: 10px;
+      padding-right: 20px;
+    }
+  }
+
+  .input-group-addon {
+    border: 1px solid #ddd;
+  }
+
+  .app-nav {
+    &.nav-pills {
+      > li {
+        > a {
+          border-radius: 0;
+          text-transform: uppercase;
+          font-size: 11px;
+        }
+      }
+    }
+  }
+
+  .pagination-sm {
+    > li {
+      &:first-child {
+        > a, > span {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .pagecount {
+    input {
+      &.form-control {
+        border-radius: 0;
+        border-color: #dddddd;
+        border-width: 1px 1px 1px 1px;
+        height: 33px;
+      }
+    }
+
+    .input-group {
+      .input-group-addon {
+        border-color: #dddddd;
+      }
+    }
+  }
+
+  .pagination {
+    > li {
+      > span, > a {
+        height: 33px;
+        padding: 7px 13px;
+        &.active, &:hover, &:focus {
+          background-color: @brand-primary;
+          color: @wm-color-white;
+        }
+        i {
+          top: 5px;
+        }
+      }
+
+      &:last-child {
+        > span, > a {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-search {
+    .form-group {
+      margin-top: 0;
+    }
+  }
+
+  .app-header-container {
+    border-bottom: 1px solid #cfdbe2;
+  }
+
+  .alert {
+    .close {
+      right: 11px;
+      top: 12px;
+    }
+  }
+
+  .app-form, .app-liveform {
+    .btn {
+      margin: 0 4px;
+    }
+    .control-label {
+      padding-top: 0;
+    }
+    .form-action, .form-action.btn-group {
+      .btn {
+        border-radius: @border-radius-base;
+        margin: 0 4px;
+      }
+    }
+  }
+
+  .app-search {
+    .input-group-addon {
+      &:hover {
+        background: #e7e7e7;
+      }
+    }
+  }
+
+  .input-group {
+    .input-group-btn {
+      button {
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &.date-wrapper {
+      .input-group-btn {
+        button {
+          i {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .input-group-sm {
+    > .form-control, > .input-group-addon, > .input-group-btn > .btn {
+      height: 33px;
+      padding: 10px 10px 7px;
+    }
+  }
+
+  .app-single-file-upload {
+    .btn {
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+
+  input {
+    &[type="radio"], &[type="checkbox"] {
+      margin-top: 2px;
+    }
+  }
+
+  label {
+    &.form-control-static {
+      padding-bottom: 0;
+    }
+  }
+
+  /*Date, DateTime & Dropdown widgets*/
+  .app-calendar, .app-date, .app-datetime, .app-timeinput {
+    .btn-default {
+      height: 37px;
+      &:hover, &:focus &:active {
+        color: #fff;
+        background-color: @brand-primary;
+        border-color: @brand-primary;
+        box-shadow: none;
+        span {
+          color: #ffffff;
+        }
+      }
+    }
+
+    thead {
+      tr {
+        th {
+          height: 30px;
+          button {
+            font-size: 12px;
+            float: none !important;
+            background: #545765;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    tbody {
+      .btn {
+        background: #ebebf3;
+        border-color: #fff;
+      }
+      .btn-default {
+        color: #333;
+        width: auto !important;
+        height: 35px;
+        &:hover, &:focus &:active {
+          background-color: @brand-primary;
+          border-color: @brand-primary;
+          box-shadow: none;
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+      .btn-info {
+        &:hover, &:focus, &:active, &.active {
+          background-color: @brand-info;
+          border-color: #fff;
+          box-shadow: none;
+          span {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    small {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+
+  .open {
+    > .dropdown-toggle {
+      .app-date, .app-datetime {
+        tbody {
+          .btn-default {
+            background-color: @brand-primary;
+            border-color: @brand-primary;
+            box-shadow: none;
+            span {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .app-date, .app-datetime {
+    .btn-group {
+      .btn {
+        margin-right: 10px;
+      }
+    }
+    .btn-success {
+      margin-right: -6px;
+    }
+    .btn-group {
+      margin-left: 24px;
+    }
+    em {
+      color: #ccc;
+    }
+    .dropdown-menu {
+      li {
+        &:last-child {
+          border-top: 1px solid #f0f0f0;
+          margin-top: 7px;
+          overflow: auto;
+          padding: 8px 9px 2px !important;
+        }
+      }
+    }
+  }
+
+  //Time Widget
+  .app-timeinput {
+    tbody {
+      .btn {
+        height: 37px;
+      }
+
+      .btn-link {
+        width: 100%;
+        background-color: transparent;
+
+        &:hover {
+          background-color: rgb(153, 153, 153);
+        }
+      }
+    }
+  }
+
+  .app-richtexteditor {
+    .btn-default {
+      background: #f7f7f7;
+      border-color: #ccc;
+      color: #666;
+      &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus,
+      &.disabled.focus, &.focus[disabled], &.disabled:active, &[disabled]:active, &.disabled.active, &.active[disabled],
+      &.disabled.active, &.active[disabled] {
+        background: #eee;
+        border-color: #ccc;
+        color: #333;
+      }
+    }
+  }
+
+  fieldset[disabled] {
+    .app-richtexteditor {
+      .btn-default, .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+        background: #eee;
+        border-color: #ccc;
+        color: #333;
+      }
+    }
+  }
+
+  .app-form, .app-liveform {
+    input {
+      &:focus {
+        border: 1px solid #aeaeae;
+        box-shadow: none;
+      }
+    }
+  }
+
+  input, select, textarea {
+    &.form-control {
+      &:focus {
+        border: 1px solid #aeaeae;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .carousel-control {
+    &.left, &.right {
+      background-image: none;
+    }
+
+    .icon-prev, .icon-next, .glyphicon-chevron-left, .glyphicon-chevron-right {
+      color: grey;
+      text-shadow: none;
+    }
+  }
+
+  .app-grid {
+    .table-footer {
+      .well {
+        .pagination {
+          .form-control {
+            padding: 2px 0 0 10px;
+            width: 45px;
+          }
+          .glyphicon {
+            top: 5px;
+          }
+        }
+      }
+    }
+
+    .form-search {
+      .input-sm, .input-group-sm {
+        font-size: @font-size-base;
+      }
+    }
+  }
+
+  .panel-title {
+    .btn {
+      max-height: 20px;
+    }
+  }
+
+  .app-accordion {
+    .app-accordion-panel {
+      .panel-heading {
+        .panel-actions {
+          right: 14px;
+          top: 17px;
+        }
+      }
+    }
+  }
+
+  .app-panel {
+    .panel-heading {
+      .panel-actions {
+        .app-menu .app-button, .panel-action {
+          margin-right: 0;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .input-group-btn {
+    &:last-child {
+      > .btn, .btn-group {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .radio, .radio-inline, .checkbox, .checkbox-inline {
+    input[type="radio"], input[type="checkbox"] {
+      margin-left: -18px;
+    }
+  }
+
+  .radio, .checkbox {
+    label {
+      color: #999;
+    }
+  }
+
+  //SWITCH
+  .app-switch {
+    border: 1px solid @brand-primary;
+    border-radius: 16px;
+    background-color: @wm-color-white;
+    .btn-group {
+      border-radius: 0 !important;
+      button {
+        border-color: transparent;
+        padding: 8px 10px;
+        border-radius: 0 !important;
+        &:hover, &:focus {
+          background-color: transparent;
+          color: @text-color;
+        }
+      }
+      span {
+        border-radius: 0 !important;
+      }
+    }
+    .btn-default {
+      background-color: transparent;
+    }
+  }
+
+  .app-colorpicker {
+    &.input-group {
+      width: 13em;
+    }
+  }
+
+  .app-richtexteditor .ta-root .ta-toolbar .btn-group .btn {
+    height: 35px;
+    padding: 9px 10px;
+  }
+  .popover {
+    border-radius: 0px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  }
+
+  .app-fileupload .app-multi-file-upload, .app-fileupload .app-single-file-upload {
+    height: auto;
+    min-height: 3em;
+  }
+  .app-files-upload-status {
+    padding-top: 10px;
+    &.multiple {
+      padding-top: 4px;
+      font-size: 1.2em;
+    }
+  }
+
+  .table-bordered {
+    > thead, > tbody, > tfoot {
+      > tr {
+        > th, > td {
+          border-color: #eee;
+        }
+      }
+    }
+  }
+
+  .table {
+    > thead, > tbody, > tfoot {
+      > tr, > tr.active {
+        > th, > td, > th.active, > td.active {
+          background-color: transparent;
+        }
+      }
+    }
+
+    > tbody {
+      tr {
+        &.active, &:hover {
+          td, th {
+            color: @text-color;
+            background-color: #d2d3d9;
+          }
+        }
+
+        &.disabled {
+          td, th {
+            color: #999;
+          }
+        }
+
+        td, th {
+          color: @text-color;
+        }
+      }
+    }
+  }
+
+  .table-hover {
+    > tbody {
+      > tr, > tr:hover, > tr.active:hover, {
+        > th.active:hover, > td.active:hover, > .active, > th, > td, .active {
+          background-color: #d2d3d9;
+        }
+      }
+
+      > tr {
+        td {
+          background-color: inherit;
+        }
+        &:hover {
+          background-color: #f5f5f5;
+          td {
+            background-color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  .table-striped {
+    > tbody {
+      > tr {
+        &:nth-of-type(2n+1) {
+          background-color: #fbfbfb;
+        }
+      }
+    }
+  }
+
+  .app-grid {
+    .table {
+      thead {
+        th {
+          .header-data {
+            font-size: 11px;
+          }
+
+          .sort-buttons-container {
+            .sort-button {
+              .sort-icon {
+                color: #ccc;
+              }
+              .up {
+                border-width: 0 4px 4px;
+                bottom: -2px;
+              }
+              .down {
+                border-width: 4px 4px 0;
+                top: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .app-form, .app-liveform {
+    &.align-left {
+      .app-label {
+        text-align: left;
+      }
+    }
+  }
+
+  .app-livelist {
+    .list-group-item {
+      .app-container {
+        .btn {
+          background-color: rgba(0, 0, 0, 0);
+          color: @brand-primary;
+          font-size: 1.5em;
+          font-weight: normal;
+        }
+      }
+
+      &.active {
+        .app-container {
+          .btn {
+            background-color: transparent;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .app-date, .app-datetime {
+    .input-group-btn {
+      .btn-default {
+        &:hover {
+          color: #fff;
+          background-color: @brand-primary;
+        }
+      }
+    }
+  }
+
+  .app-fileupload {
+    .btn-default {
+      &:hover {
+        color: #fff;
+        background-color: @brand-primary;
+      }
+    }
+  }
+}
