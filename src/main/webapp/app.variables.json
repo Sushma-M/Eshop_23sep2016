@@ -2110,6 +2110,7 @@
 		"tableType": "TABLE"
 	},
 	"GoogleapisInvoke": {
+		"name": "GoogleapisInvoke",
 		"type": "googleapis.DirectionsResponse",
 		"isList": false,
 		"owner": "App",
@@ -2178,7 +2179,6 @@
 				}
 			]
 		},
-		"_id": "wm-GoogleapisInvoke-wm.ServiceVariable-1443068690127",
-		"name": "GoogleapisInvoke"
+		"_id": "wm-GoogleapisInvoke-wm.ServiceVariable-1443068690127"
 	}
 }
